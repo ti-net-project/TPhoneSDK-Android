@@ -12,9 +12,9 @@ plugins {
 }
 
 ext {
-    tiphoneVersion = "1.1.0"
+    tiphoneVersion = "1.1.3"
     targetDownloadName = "tiphone_${tiphoneVersion}_release.zip"
-    targetAarName = "tiphone_${tiphoneVersion}_release.aar"
+    targetAarName = "tiphone_1.1.0_release.aar"
     downloadedSdkFile = new File("$buildDir/ti-sdk/${targetDownloadName}")
     coreModulePath = "${rootDir.path}/tiphonelib_go_core"
 
