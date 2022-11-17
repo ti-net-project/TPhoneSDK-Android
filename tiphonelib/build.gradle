@@ -29,8 +29,8 @@ android {
     }
 
 
-    task deleteExpiredFiles(type:Delete){
-        delete = ["${projectDir.path}/libs","${projectDir.path}/src/main/jinLibs","${coreModulePath}/libs","${coreModulePath}/src/main/jinLibs"]
+    task deleteExpiredFiles(type: Delete) {
+//        delete = ["${projectDir.path}/libs","${projectDir.path}/src/main/jinLibs","${coreModulePath}/libs","${coreModulePath}/src/main/jinLibs"]
     }
 
     task downloadSDK(type: de.undercouch.gradle.tasks.download.Download) {
@@ -68,6 +68,7 @@ android {
         it.dependsOn("downloadSDK")
     }
 
+
 }
 
 afterEvaluate {
@@ -89,6 +90,19 @@ afterEvaluate {
 //                from(components["debug"])
 //            }
 //        }
+
+        tasks.named("extractDeepLinksForAarRelease") {
+            it.dependsOn("explodeTPhoneSDK-AndroidTiphone_${rootProject.ext.tiphoneVersion}_releaseRelease")
+        }
+
+        tasks.named("generateMetadataFileFor_tiphone-release_Publication") {
+            it.dependsOn("reBundleAarRelease")
+        }
+
+        tasks.named("publish_tiphone-release_PublicationToMavenLocal") {
+            it.dependsOn("assemble")
+            it.dependsOn("reBundleAarRelease")
+        }
     }
 }
 
