@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+        maven{url=uri("https://jitpack.io")}
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+        maven{url=uri("https://jitpack.io")}
+    }
+}
+rootProject.name = "TPhoneSDK-Android"
+include ':app'
+include ':tiphonelib'
+include ':tiphonelib_go_core'
