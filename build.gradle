@@ -12,7 +12,7 @@ plugins {
 }
 
 ext {
-    tiphoneVersion = "1.1.5"
+    tiphoneVersion = "1.1.6"
     targetDownloadName = "tiphone_1.1.0_release.zip"
     targetAarName = "tiphone_1.1.0_release.aar"
     downloadedSdkFile = new File("$buildDir/ti-sdk/${targetDownloadName}")

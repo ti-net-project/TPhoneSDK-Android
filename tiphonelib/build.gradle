@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.tinet.tiphonelib'
+    namespace 'com.tinet.tiphonelib_public'
     compileSdk 32
 
     defaultConfig {
