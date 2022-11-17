@@ -42,25 +42,25 @@ android {
         onlyIfModified true
 
         doLast {
-            System.out.println("start to copy libs")
-
-            copy {
-                from zipTree(downloadedSdkFile)
-                include "arm*/**", "x86*/**"
-                into "${project.projectDir}/src/main/jniLibs"
-            }
-
-            copy {
-                from zipTree(downloadedSdkFile)
-                include "*.jar"
-                into("${project.projectDir}/libs")
-            }
-
-            copy {
-                from zipTree(downloadedSdkFile)
-                include "*.aar"
-                into("${coreModulePath}/libs")
-            }
+//            System.out.println("start to copy libs")
+//
+//            copy {
+//                from zipTree(downloadedSdkFile)
+//                include "arm*/**", "x86*/**"
+//                into "${project.projectDir}/src/main/jniLibs"
+//            }
+//
+//            copy {
+//                from zipTree(downloadedSdkFile)
+//                include "*.jar"
+//                into("${project.projectDir}/libs")
+//            }
+//
+//            copy {
+//                from zipTree(downloadedSdkFile)
+//                include "*.aar"
+//                into("${coreModulePath}/libs")
+//            }
         }
     }
 
@@ -91,23 +91,23 @@ afterEvaluate {
 //            }
 //        }
 
-        tasks.named("extractDeepLinksForAarRelease") {
-            it.dependsOn("explodeTPhoneSDK-AndroidTiphone_1.1.0_releaseRelease")
-        }
-
-        tasks.named("generateMetadataFileFor_tiphone-release_Publication") {
-            it.dependsOn("reBundleAarRelease")
-        }
-
-        tasks.named("publish_tiphone-release_PublicationToMavenLocal") {
-            it.dependsOn("assemble")
-            it.dependsOn("reBundleAarRelease")
-        }
+//        tasks.named("extractDeepLinksForAarRelease") {
+//            it.dependsOn("explodeTPhoneSDK-AndroidTiphone_1.1.0_releaseRelease")
+//        }
+//
+//        tasks.named("generateMetadataFileFor_tiphone-release_Publication") {
+//            it.dependsOn("reBundleAarRelease")
+//        }
+//
+//        tasks.named("publish_tiphone-release_PublicationToMavenLocal") {
+//            it.dependsOn("assemble")
+//            it.dependsOn("reBundleAarRelease")
+//        }
     }
 }
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    embed project(path: ':tiphonelib_go_core', configuration: 'default')
+//    embed project(path: ':tiphonelib_go_core', configuration: 'default')
     api("org.webrtc:google-webrtc:1.0.32006")
 }
