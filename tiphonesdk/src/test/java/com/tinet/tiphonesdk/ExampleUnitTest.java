@@ -1,4 +1,4 @@
-package com.tinet.tiphonelib;
+package com.tinet.tiphonesdk;
 
 import org.junit.Test;
 
