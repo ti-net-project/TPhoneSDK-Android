@@ -1,4 +1,4 @@
-package com.tinet.tiphonelib_go_core;
+package com.tinet.tiphonesdk;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.tinet.tiphonelib_go_core.test", appContext.getPackageName());
+        assertEquals("com.tinet.tiphonesdk", appContext.getPackageName());
     }
 }

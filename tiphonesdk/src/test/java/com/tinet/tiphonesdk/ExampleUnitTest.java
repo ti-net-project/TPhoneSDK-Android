@@ -1,4 +1,4 @@
-package com.tinet.tiphonelib_go_core;
+package com.tinet.tiphonesdk;
 
 import org.junit.Test;
 
