@@ -34,7 +34,7 @@ ext {
 //    downloadedSdkFile = new File("$buildDir/ti-sdk/${targetDownloadName}")
 //    coreModulePath = "${rootDir.path}/tiphonelib_go_core"
 
-    versionName = "11.0.0"
+    versionName = "11.0.1"
     groupId = "com.github.ti-net-project"
     artifactId = "TPhoneSDK-Android"
 }

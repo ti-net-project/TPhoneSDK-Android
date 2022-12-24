@@ -1,2 +1,2 @@
 configurations.maybeCreate("default")
-artifacts.add("default", file('tiphone_11.0.0_release.aar'))
+artifacts.add("default", file('tiphone_11.0.1_release.aar'))
